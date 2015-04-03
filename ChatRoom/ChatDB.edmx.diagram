@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5361c86fd2734facb7875d0f8dc02734" Name="Diagram1">
+        <EntityTypeShape EntityType="ChatDBModel.Conversation" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatDBModel.Message" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatDBModel.User" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChatDBModel.UserToken" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="ChatDBModel.FK_Conversations_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatDBModel.FK_Conversations_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatDBModel.FK_Messages_Messages" ManuallyRouted="false" />
+        <AssociationConnector Association="ChatDBModel.FK_UserTokens_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "CreateAccount";
+}
+
+<h2>Create New Account</h2>
+<form action="@Url.Action("CreateAccount", "Home")" method="post">
+    <p>Username</p>
+    <input type="text" name="userName" />
+    <p>Password</p>
+    <input type="text" name="password" />
+    <p>Create Account</p>
+    <input type="submit" value="Submit" />
+</form>

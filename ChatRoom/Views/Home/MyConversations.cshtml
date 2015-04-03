@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "MyConversations";
+}
+
+<head>
+    <title></title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/AddedScripts/MyConversations.js"></script>
+   
+</head>
+
+<h2>MyConversations</h2>
+<h3>(Click to show conversation)</h3>
+<div id="currentUser" value=@ViewBag.CurrentUser></div>
+<div id="conversationList">
+@foreach (var item in ViewBag.Conversations)
+{
+    if(item.User1 == ViewBag.CurrentUser)
+    { 
+        <h3 class="conversation" value=@item.User2 data-conversationid="@item.ConversationID" id="@item.ConversationID">@item.User2
+        <p class="messages">(@item.Messages.Count)</p></h3>
+    }
+    else
+    {
+        <h3 class="conversation" value=@item.User1 data-conversationid="@item.ConversationID" id="@item.ConversationID">@item.User2
+        <p class="messages">(@item.Messages.Count)</p></h3>
+    }
+
+}
+</div>
+<div id="ConversationTitle"></div>
+<div id="Conversation"></div>
+
+<div id="sendMessage">
+    <form id="sendMessageForm" action="@Url.Action("SendMessage", "Home")" method="post">
+        <p>Message</p>
+        <input type="text" id="message" name="message" />
+        <input type="submit" id="sendSubmit" name="submit" value="Send" />
+    </form>
+</div>

@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "LoggedOutRedirect";
+}
+
+<h2>You Are Currently Logged Out. Please Login or Create a New Account.</h2>
+<a href="@Url.Action("Login", "Auth")"><h3>Login</h3></a>
+<br/>
+<a href="@Url.Action("CreateAccount", "Home")"><h3>Create Account</h3></a>
